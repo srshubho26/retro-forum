@@ -6,6 +6,10 @@ const loadAllPosts = async(query="")=>{
 
 const displayAllPosts = posts => {
     const postContainer = document.getElementById("post-container");
+    if(!posts.length){
+        postContainer.innerHTML = '<h3 class="text-center py-5 text-yellow-600 text-3xl">No post available!</h3>';
+        return;
+    }
     postContainer.innerHTML = "";
     posts.forEach(post=>{
         const div = document.createElement('div');
@@ -59,7 +63,6 @@ const displayAllPosts = posts => {
 
         postContainer.appendChild(div);
     });
-    document.getElementById("postLoader").classList.add("hidden");
 }
 
 loadAllPosts();
@@ -88,6 +91,7 @@ const markAsRead = (description, view_count)=>{
 const handleSearchByCategory = ()=>{
     const query = document.getElementById('searchPosts').value;
     loadAllPosts(query);
+    window.location.href = "#post-container";
 }
 
 const loadLatestPost = async()=>{

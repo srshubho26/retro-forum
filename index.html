@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -108,8 +108,8 @@
                 <input
                   id="searchPosts"
                   type="text"
-                  class="grow"
-                  placeholder="Search Here Anything..."
+                  class="grow text-stone-700"
+                  placeholder="Search Post By Category..."
                 />
                 <button
                 onclick="handleSearchByCategory()"
@@ -157,14 +157,6 @@
         <!-- discussions with selections -->
         <div class="flex lg:flex-row flex-col gap-8 my-12">
           <div id="post-container" class="lg:w-8/12 space-y-5">
- <!-- demo card showing without dynamic value  -->
-
-            <div class="flex w-full justify-center">
-              <span
-                id="postLoader"
-                class="loading loading-spinner loading-lg lg:mt-24 text-primary"
-              ></span>
-            </div>
             <!-- dynamic content -->
           </div>
           <div class="lg:w-4/12">
